@@ -15,6 +15,6 @@ This repository stores ideas for creating beautiful buttons, inputs, form, nav..
 | 🎉 [Add To Cart With Animation][addtocart-animation-ref-link] | 🎪 [Name Pattern][demo-link] | 🎪 [Name Pattern][demo-link] |
 | 🎉 [3D Effect][3d-effect-ref-link]                            |                              |                              |
 
-[link-demo]: https://github.com/Pine1611/365-days-ui/
+[link-demo]: https://pine1611.github.io/365-days-ui/
 [addtocart-animation-ref-link]: https://github.com/Pine1611/365-days-ui/tree/main/ui-buttons/01-addtocart-animation
 [3d-effect-ref-link]: https://github.com/Pine1611/365-days-ui/tree/main/ui-buttons/02-3d-effects/
