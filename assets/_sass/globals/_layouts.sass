@@ -1,0 +1,22 @@
+@use "sass:math"
+
+.flex
+    $gap: $gap_flex
+
+    display: flex
+    gap: $gap
+
+    &--y
+        flex-direction: column
+    &--center
+        justify-content: center
+        align-items: center
+    &--wrap
+        flex-wrap: wrap
+
+    .basis-3
+        flex-basis: calc( math.div(100%, 12) * 3 - $gap + ($gap / (12 / 3)) )
+        @media (max-width: 769px)
+            flex-basis: calc( math.div(100%, 12) * 6 - $gap + ($gap / (12 / 2)) )
+        @media (max-width: 520px)
+            flex-basis: 100%
