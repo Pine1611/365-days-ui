@@ -1,0 +1,103 @@
+@import "../../../assets/_sass/globals/variables"
+
+.btn
+    $btnText: null
+    $btnTextAdded: null
+    $btnIconCart: null
+    $btnIconBox: null
+
+    position: relative
+    padding: 8px 24px
+    margin: 24px 0
+    background: $primary_400
+    border: none
+    border-radius: 8px
+    height: 42px
+    min-width: 140px
+    cursor: pointer
+    overflow: hidden
+    transition: all 230ms ease-in-out
+
+    &:hover
+        background: $primary_500
+
+    &__text
+        $btnText: &
+
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 100%
+        color: $primary_50
+        font-size: 13px
+        text-transform: uppercase
+        transform: translate(-50%, -50%)
+        &--added
+            $btnTextAdded: &
+            opacity: 0
+
+    &__icons
+        position: absolute
+
+        &--cart
+            $btnIconCart: &
+
+            width: 20px
+            height: 20px
+            top: 50%
+            left: -20%
+            fill: $primary_800
+            z-index: 10
+            transform: translate(0, -50%)
+        &--box
+            $btnIconBox: &
+
+            width: 14px
+            height: 14px
+            top: -40%
+            left: 52%
+            fill: $primary_100
+            z-index: 9
+            transform: translate(-52%, 0) rotateZ(45deg)
+
+    &.clicked
+        #{$btnText}
+            animation: amt_text 1.5s ease-in-out forwards
+        #{$btnTextAdded}
+            animation: amt_text_added 1.5s ease-in-out forwards
+        #{$btnIconCart}
+            animation: amt_icon_cart 1.5s ease-in-out forwards
+        #{$btnIconBox}
+            animation: amt_icon_box 1.5s ease-in-out forwards
+
+@keyframes amt_icon_cart
+    0%
+        left: -20%
+    40%, 75%
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+    100%
+        left: 102%
+
+@keyframes amt_icon_box
+    0%, 50%
+        top: -40%
+        left: 52%
+    68%, 75%
+        top: 6%
+        left: 52%
+    100%
+        top: 6%
+        left: 112%
+
+@keyframes amt_text
+    0%
+        opacity: 1
+    50%, 100%
+        opacity: 0
+@keyframes amt_text_added
+    0%, 68%
+        opacity: 0
+    100%
+        opacity: 1
