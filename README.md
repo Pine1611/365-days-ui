@@ -8,6 +8,8 @@ This repository stores ideas for creating beautiful buttons, inputs, form, nav..
 
 ## Form Elements
 
-| 🍁 Buttons                   | 🍁 Inputs                    | 🍁 Radios                    |
-| :--------------------------- | :--------------------------- | :--------------------------- |
-| 🎉 [Name Pattern][demo-link] | 🎉 [Name Pattern][demo-link] | 🎪 [Name Pattern][demo-link] |
+| 🍁 Buttons                                                    | 🍁 Inputs                    | 🍁 Radios                    |
+| :------------------------------------------------------------ | :--------------------------- | :--------------------------- |
+| 🎉 [Add To Cart With Animation][addtocart-animation-ref-link] | 🎉 [Name Pattern][demo-link] | 🎪 [Name Pattern][demo-link] |
+
+[addtocart-animation-ref-link]: https://github.com/Pine1611/365-days-ui/tree/main/ui-buttons/01-addtocart-animation
