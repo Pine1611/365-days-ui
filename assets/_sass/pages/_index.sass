@@ -1,0 +1,116 @@
+.header
+    $blockName: &
+
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+    justify-content: space-between
+    gap: $gap_flex
+    background: $primary_400
+    padding: 12px
+
+    @media screen and ( max-width: 480px )
+        flex-direction: column
+        align-items: center
+
+    &__logo
+        width: 52px
+        height: 52px
+        border-radius: 8px
+        background: rgba($black, .2)
+        transition: 230ms all ease-in-out
+        box-shadow: 0 13px 7px -15px rgba($black, .25), 0 8px 16px -8px rgba($black, .3), 0 -6px 16px -6px rgba($black, .03)
+        svg
+            width: 32px
+            height: 32px
+            fill: $primary_50
+        &:hover
+            background: rgba($black, .1)
+            animation: shadow_animated 180ms ease-in-out forwards
+            svg
+                transform: scale(.98)
+    &__nav
+        display: flex
+        align-items: flex-end
+        gap: 4px
+        &-item
+            display: flex
+            padding: 6px
+            border-radius: 6px
+            &:hover
+                background: rgba($black, .1)
+                animation: shadow_animated 180ms ease-in-out forwards
+                svg
+                    transform: scale(.85)
+    &__title
+        font-size: 24px
+        color: $primary_900
+        text-transform: uppercase
+        text-align: center
+        padding: 8px
+        @media screen and ( max-width: 768px )
+            font-size: 18px
+
+.main-content
+    padding: $gap_flex
+
+.boxes
+    padding: 0 20px 32px
+    border: 1px solid $primary_100
+    border-radius: 8px
+    position: relative
+    min-height: 168px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.ribbon
+    position: relative
+    top: 12px
+    left: -35px
+    width: 150%
+    font-size: 14px
+    line-height: 28px
+    text-align: center
+    color: $black
+    text-shadow: rgba($white, 0.5) 0px 1px 0px
+    transform: rotate(-45deg)
+    background-color: $green_leaf_300
+    background-image: -webkit-gradient(linear, left top, left bottom, from($green_leaf_300), to($green_leaf_600))
+    background-image: -webkit-linear-gradient(top, $green_leaf_300, $green_leaf_600)
+    box-shadow: -1px 1px 2px 0px rgba($black, 0.2)
+    &::before, &::after
+        content: ""
+        position: absolute
+        bottom: -2px
+        border-top: 3px solid $green_leaf_800
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+    &::before
+        left: calc(100%/18)
+    &::after
+        right: calc(100%/11)
+    &__wrapper
+        width: 85px
+        height: 85px
+        overflow: hidden
+        position: absolute
+        top: -3px
+        left: -3px
+
+.tags
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    width: 100%
+    font-size: 13px
+    line-height: 14px
+    color: $primary_600
+    font-style: italic
+    height: 32px
+    padding: 6px 12px
+    border-top: 1px solid $primary_100
+    background: $primary_50
